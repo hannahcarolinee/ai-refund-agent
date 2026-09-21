@@ -21,8 +21,7 @@ provider = os.getenv("MODEL_PROVIDER", "gemini").lower()
 if provider == "gemini" or os.getenv("GOOGLE_API_KEY"):
     from langchain_google_genai import ChatGoogleGenerativeAI
     llm = ChatGoogleGenerativeAI(
-        # model="gemini-3.6-flash", # Uses the standard 1,500 requests/day quota
-        model="gemini-flash-lite-latest",
+        model="gemini-3.6-flash", # Uses the standard 1,500 requests/day quota
         temperature=0.0,
         google_api_key=os.getenv("GOOGLE_API_KEY")
     )

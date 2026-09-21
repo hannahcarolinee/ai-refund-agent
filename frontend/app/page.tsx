@@ -418,27 +418,43 @@ export default function CustomerSupportPortal() {
             </div>
           </nav>
         </div>
-
         {/* Consumer-Facing Account Switcher Widget */}
-        <div className="pt-4 space-y-2">
-          {/* Consumer-Facing Account */}
-          <div className="pt-4 border-t border-slate-100">
-            <div className="bg-slate-50 border border-slate-200/70 rounded-xl p-2.5 flex items-center space-x-2.5">
-              <div className="w-8 h-8 rounded-full bg-violet-600 text-white font-bold text-xs flex items-center justify-center shrink-0 shadow-sm">
-                {selectedCustomer?.name?.charAt(0) || "U"}
-              </div>
-
-              <div className="flex-1 min-w-0">
-                <p className="text-xs font-bold text-slate-800 truncate">
-                  {selectedCustomer?.name || "User"}
-                </p>
-                <p className="text-[10px] text-slate-400 truncate">
-                  {selectedCustomer?.email ||
-                    `${selectedCustomer?.account_tier} Member`}
-                </p>
-              </div>
-            </div>
-          </div>
+        {/* Consumer-Facing Account Switcher Widget */}{" "}
+        <div className="pt-4 border-t border-slate-100 space-y-2">
+          {" "}
+          <div className="bg-slate-50 border border-slate-200/70 rounded-xl p-2.5 flex items-center space-x-2.5">
+            {" "}
+            <div className="w-8 h-8 rounded-full bg-violet-600 text-white font-bold text-xs flex items-center justify-center shrink-0 shadow-sm">
+              {" "}
+              {selectedCustomer?.name.charAt(0) || "U"}{" "}
+            </div>{" "}
+            <div className="flex-1 min-w-0">
+              {" "}
+              <select
+                className="w-full bg-transparent text-xs font-bold text-slate-800 focus:outline-none cursor-pointer truncate"
+                value={selectedCustomer?.customer_id || ""}
+                onChange={(e) => {
+                  const cust = customers.find(
+                    (c) => c.customer_id === e.target.value,
+                  );
+                  if (cust) handleCustomerChange(cust);
+                }}
+              >
+                {" "}
+                {customers.map((c) => (
+                  <option key={c.customer_id} value={c.customer_id}>
+                    {" "}
+                    {c.name}{" "}
+                  </option>
+                ))}{" "}
+              </select>{" "}
+              <p className="text-[10px] text-slate-400 truncate">
+                {" "}
+                {selectedCustomer?.email ||
+                  `${selectedCustomer?.account_tier} Member`}{" "}
+              </p>{" "}
+            </div>{" "}
+          </div>{" "}
         </div>
       </aside>
 

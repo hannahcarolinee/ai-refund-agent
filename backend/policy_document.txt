@@ -1,0 +1,34 @@
+================================================================================
+                    APEX COMMERCE GLOBAL REFUND POLICY (POL-2025-REV4)
+================================================================================
+
+1. TIME WINDOW ELIGIBILITY
+   1.1. Refund requests must be initiated within 30 calendar days from the verified
+        carrier delivery date.
+   1.2. Items delivered more than 30 calendar days ago are strictly ineligible 
+        for refund, return, or store credit.
+
+2. PRODUCT CONDITION & RESTOCKING DEDUCTIONS
+   2.1. Unopened / Factory-Sealed: 100% full refund to original payment method.
+   2.2. Opened / Like-New: Eligible for a refund with a mandatory 15% restocking fee
+        deducted, OR 100% store credit (customer choice).
+   2.3. Damaged / Heavily Used: Ineligible for refund unless covered under DOA (Section 5.2).
+
+3. NON-REFUNDABLE CATEGORIES (EXCLUSIONS)
+   3.1. Digital products, downloadable software licenses, and digital gift cards.
+   3.2. Personal hygiene, swimwear, and intimate apparel if packaging is unsealed.
+   3.3. Clearance or "Final Sale" items discounted at 50% or greater.
+   3.4. Custom-made, monogrammed, or personalized merchandise.
+
+4. FRAUD & ABUSE GUARDRAILS
+   4.1. Account Risk Threshold: Accounts with fraud_risk_score >= 0.70 must be
+        escalated to a human supervisor. The agent cannot issue automated refunds.
+   4.2. Frequency Lock: Accounts with 3 or more refunds in the past 90 days are 
+        locked from automated processing and require supervisor review.
+   4.3. High-Value Cap: Single items exceeding $500.00 require human escalation.
+
+5. SPECIAL CIRCUMSTANCES
+   5.1. Lost in Transit: Tracking shows no movement for >= 7 business days:
+        100% full refund or free replacement.
+   5.2. Damaged on Arrival (DOA): Full refund if reported within 72 hours of delivery.
+================================================================================
